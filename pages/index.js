@@ -1,118 +1,45 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
+import { WaitlistForm } from '../components/WaitlistForm';
 
 export default function Home() {
   return (
-    <main
-      className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
-    >
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">pages/index.js</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen flex flex-col justify-center items-center relative px-4 bg-cover">
+
+
+      {/* Background Image */}
+      <img src="/assets/images/backgroundimage.jpg" alt="Background Image" className="w-full h-full object-cover absolute inset-0 z-0"/>
+      
+      
+      {/* Hero Section with Glass Morphism Background */}
+      
+      <div className="absolute top-0 left-0 m-4 text-5xl font-bold italic text-black">
+        Lexicon
+      </div>
+      <div class="bg-white bg-opacity-20 backdrop-blur-sm rounded-lg border border-white border-opacity-20 ...">
+      <div className="flex flex-col space-y-8 pb-16 px-8 md:flex-row md:space-x-16 lg:space-x-32 relative z-10 glass-morphism">
+        <div className="w-full md:w-1/2 flex flex-col items-center justify-center space-y-4">
+          <h1 className="text-9xl font-bold text-black">Tinder for Vocabulary</h1>
+          <p className="text-5xl text-black text-center md:text-left">
+            Swipe, learn, and find words to boost your vocabulary and impress!
+          </p>
+        </div>
+        <div className="flex justify-center items-center w-full md:w-1/2">
+          <svg className="w-48 h-48 fill-current text-black" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <path d="M90.5 10.644c-4.88 0-8.96 1.923-12.346 5.76l-29.4 29.4-29.4-29.4c-3.386-3.838-7.466-5.76-12.346-5.76-4.88 0-8.96 1.923-12.346 5.76L2.712 50.1c-3.386 3.838-3.386 9.614 0 13.45l29.4 29.4-29.4 29.4c-3.386 3.838-3.386 9.614 0 13.45l48 48c3.386 3.838 9.614 3.386 13.45 0l48-48 29.4-29.4 29.4 29.4c3.386 3.838 9.614 3.386 13.45 0l48-48c3.386-3.838 3.386-9.614 0-13.45l-29.4-29.4 29.4-29.4c3.386-3.838 3.386-9.614 0-13.45l-48-48zM100 100c22.089 0 40 17.911 40 40s-17.911 40-40 40-40-17.911-40-40 17.911-40 40-40z" />
+          </svg>
         </div>
       </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700/10 after:dark:from-sky-900 after:dark:via-[#0141ff]/40 before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
       </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Discover and deploy boilerplate example Next.js&nbsp;projects.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
+      {/* WaitlistForm Container */}
+      {/* <div className="max-w-md w-full mx-auto p-8 m-6 bg-purple-500 rounded-lg shadow-lg relative z-10">
+        <h1 className="text-2xl font-bold mb-4">Join The Lexicon Waitlist</h1>
+        <WaitlistForm />
       </div>
-    </main>
+    </div> */}
+    {/* WaitlistForm Container */}
+      <div className="max-w-md w-full mx-auto p-8 m-6 bg-purple-500 rounded-lg shadow-lg relative z-10">
+        <h1 className="text-2xl font-bold mb-4 text-white">Join The Lexicon Waitlist</h1>
+        <WaitlistForm />
+      </div>
+    </div>
   );
 }
