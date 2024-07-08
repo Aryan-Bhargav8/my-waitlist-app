@@ -29,7 +29,7 @@ export function WaitlistEmail({ name }) {
           <Text style={paragraphStyle}>
             Lexicon is your ultimate vocabulary enhancer, designed to be as engaging and fun as Tinder. Prepare to swipe through a plethora of words, expand your vocabulary, and impress everyone with your newfound linguistic prowess!
           </Text>
-          <Button href="https://your-app-link.com" style={buttonStyle}>
+          <Button href="https://lexicon-waitlist-app.vercel.app/" style={buttonStyle}>
             Discover More About Lexicon
           </Button>
         </Container>
