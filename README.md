@@ -50,29 +50,40 @@ The project structure is as follows:
 
 ```
 my-waitlist-app/
+    ├── components/
+    │   └── ...  # UI components used across the application.
+    ├── emails/
+    │   └── ...  # Email templates for the application.
+    ├── lib/
+    │   ├── email.js  # Handles email sending logic.
+    │   └── sheets.js  # Interacts with Google Sheets for data storage.
     ├── pages/
-    │   ├── index.js
+    │   ├── index.js  # The homepage of the app.
     │   └── api/
-    │       └── hello.js
+    │       └── join-waitlist.js  # API route for joining the waitlist.
     ├── public/
-    │   └── ...
+    │   └── ...  # Static assets like images or fonts.
     ├── styles/
-    │   └── ...
+    │   └── ...  # CSS files for styling the app.
     ├── .gitignore
     ├── package.json
     ├── README.md
     └── ...
 ```
 
-The `pages` directory contains the main pages of the app, including the `index.js` file which serves as the homepage. The `api` directory contains the API routes used by the app.
+The `components` directory contains the UI components that are used throughout the application, helping to maintain a consistent look and feel.
 
-The `public` directory is used for storing static assets such as images or fonts.
+The `emails` directory is used for storing email templates, which are utilized for communication with users.
 
-The `styles` directory contains CSS files for styling the app.
+The `lib` directory contains important files like `email.js` for email handling and `sheets.js` for interactions with Google Sheets, centralizing the application's core functionality.
 
-The `.gitignore` file specifies which files and directories should be ignored by Git.
+The `pages` directory houses the main pages of the app, including the `index.js` file which serves as the homepage. The `api` directory within it contains the API routes the app uses.
 
-The `package.json` file lists the project dependencies and scripts.
+The `public` directory is designated for static assets such as images or fonts, which are publicly accessible.
+
+The `styles` directory is where the CSS files for styling the application are located.
+
+The `.gitignore` file is crucial for specifying which files and directories should be ignored by Git, preventing unnecessary files from being tracked or uploaded.
 
 ## Learn More
 
