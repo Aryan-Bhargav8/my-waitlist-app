@@ -1,16 +1,15 @@
 import { sendEmail } from '../../lib/email';
+import { addRowToSheet } from '../../lib/sheets';
 
 export default async function handler(req, res) {
   if (req.method === 'POST') {
     const { email, name } = req.body;
 
     try {
-      // TODO: Add email and name to your database or service
-
-      // Send confirmation email
+      await addRowToSheet([name, email]);
       await sendEmail({
         to: email,
-        name: name || 'there', // Use 'there' if no name is provided
+        name: name || 'there',
       });
 
       res.status(200).json({ message: 'Successfully joined waitlist' });

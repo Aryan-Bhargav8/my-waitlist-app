@@ -28,6 +28,8 @@ yarn-error.log*
 # local env files
 .env*.local
 
+#service account file
+/config/service-account-file.json
 # vercel
 .vercel
 
